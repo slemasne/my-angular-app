@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component'
+import { ListComponent } from './list/list.component'
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'list', component: ListComponent }
+
+
+
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+    FormsModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
